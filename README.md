@@ -1,38 +1,36 @@
-# 📊 Trending Hashtag Analysis
+# 📊 Social Media Trend Detection
 
-This project analyzes a **cleaned dataset of viral social media trends** to identify which hashtags are gaining traction. Using **Python (Pandas)**, it maps engagement levels into numeric values and classifies hashtags into **Low, Medium, or High Trending** categories.
+This project analyzes **viral social media datasets** to identify which hashtags are gaining traction. Using **Python (Pandas)**, it maps engagement levels into numeric values and classifies hashtags into **Low, Medium, or High trending** categories.
 
 ---
 
 ## 🚀 Features
 
-* 🧹 Works with a **cleaned dataset** of social media hashtags
-* 🔢 Converts engagement metrics into **numeric values**
-* 📈 Classifies hashtags into **Low / Medium / High trending** categories
-* 📊 Provides insights into **viral trends**
+* Works with multiple datasets (`Viral`, `Engagement`, `Cleaned`)
+* Maps `Engagement_Level` → numeric values (`Low=0, Medium=1, High=2`)
+* Normalizes engagement categories into lowercase (`low, medium, high`)
+* Extracts only **Medium** and **High trending hashtags**
+* Prints results with hashtag, engagement level, and category
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Programming Language:** Python
-* **Libraries:** Pandas, NumPy, Matplotlib / Seaborn (if visualization included)
+* **Language:** Python 3
+* **Libraries:** Pandas
 
 ---
 
 ## 📂 Project Structure
 
 ```
-trending-hashtag-analysis/
-│── data/             # Dataset files (CSV/Excel)  
-│── notebooks/        # Jupyter notebooks for analysis  
-│── src/              # Python scripts  
-│   ├── preprocess.py # Data cleaning & preprocessing  
-│   ├── classify.py   # Classification logic  
-│   └── visualize.py  # (Optional) Charts & graphs  
-│── results/          # Output files & reports  
-│── README.md         # Project documentation  
-└── requirements.txt  # Python dependencies
+social-media-trend-detection/
+│── .idea/                                 # IDE config files (can be ignored)  
+│── Cleaned_Viral_Social_Media_Trends.csv  # Pre-cleaned dataset  
+│── Social Media Engagement Dataset.csv    # Raw engagement dataset  
+│── Viral_Social_Media_Trends.csv          # Raw viral dataset  
+│── social_media_trending_content.py       # Main Python script  
+│── README.md                              # Project documentation  
 ```
 
 ---
@@ -42,32 +40,52 @@ trending-hashtag-analysis/
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/Tharun-dot/trending-hashtag-analysis.git
+   git clone https://github.com/Tharun-dot/social-media-trend-detection.git
    ```
 2. Navigate into the project:
 
    ```bash
-   cd trending-hashtag-analysis
+   cd social-media-trend-detection
    ```
 3. Install dependencies:
 
    ```bash
-   pip install -r requirements.txt
+   pip install pandas
    ```
-4. Run the analysis:
+4. Run the script:
 
    ```bash
-   python src/classify.py
+   python social_media_trending_content.py
    ```
 
 ---
 
+## 📊 Example Output
+
+**Trending Hashtags:**
+
+```
+#SummerVibes
+#FoodieLife
+#TechTrends
+```
+
+**Detailed View:**
+
+```
+       Hashtag    Engagement_Level   is_trending
+0   #SummerVibes         High           high
+1   #FoodieLife         Medium         medium
+2   #TechTrends        High           high
+```
+
+---
 
 ## 🎯 Future Enhancements
 
-* Add **real-time Twitter/Instagram API integration**
-* Use **Machine Learning models** for trend prediction
-* Create a **dashboard** for visualization (Streamlit / Dash)
+* Add **data visualization** for engagement levels
+* Support **real-time trend detection** from APIs
+* Build a **Streamlit dashboard** to explore trends interactively
 
 ---
 
@@ -78,7 +96,3 @@ Feel free to fork this repo and submit a pull request.
 
 ---
 
-
-
-* GitHub: [Your GitHub Profile]
-* LinkedIn: [Your LinkedIn Profile]
